@@ -100,7 +100,7 @@ h3 {
 button {
   border: none;
   border-radius: 100px;
-  padding: 8px 20px;
+  padding: 10px 24px;
 
   font-weight: 500;
   color: var(--color-white);
@@ -111,12 +111,6 @@ button {
     inset 0 2px 1px 0 rgba(255, 255, 255, 0.25),
     inset 0 32px 24px 0 var(--opacity-white-5);
   background: var(--color-coffee-dark);
-}
-
-@media only screen and (min-width: 1440px) {
-  button {
-    padding: 10px 24px;
-  }
 }
 
 button:hover,
