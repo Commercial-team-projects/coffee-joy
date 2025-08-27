@@ -1,1 +1,64 @@
-/*Styles for section subscribe*/ 
+/*Styles for section subscribe*/
+.sub-img {
+    border-radius: 40px;
+    overflow: hidden;
+    margin: 32px auto 0 auto;
+
+}
+
+.subscribe-form {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+}
+
+.subscribe-btn-icon {
+    margin-left: 12px;
+    fill: var(--color-white);
+}
+
+.subscribe-btn {
+    margin-bottom: 16px;
+
+}
+
+.under-btn-text {
+    font-size: 12px;
+}
+
+@media (min-width: 768px) {
+    .subscribe-form {
+        flex-direction: row;
+        margin-bottom: 16px;
+    }
+
+    .subscribe-form>input {
+        width: 340px;
+        height: 44px;
+    }
+
+    .subscribe-btn {
+        height: 44px;
+        margin-bottom: 0;
+    }
+}
+
+@media (min-width: 1440px) {
+    .subscribe-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 32px;
+    }
+
+    .subscribe-content {
+        max-width: 640px;
+        text-align: left;
+        margin: 0;
+    }
+
+    h2 {
+        font-weight: 400;
+    }
+}
