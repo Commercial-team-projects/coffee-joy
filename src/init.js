@@ -1,28 +1,54 @@
+/* 
+        
+        Very important!!!
+
+        Runing this script insert changes into your working files.
+        Use it ones at the start of project.
+
+
+        Features:
+
+        1. Delete all content from file index.html
+        2. Delete all content from directories /partials and /css
+        3. Create /index.html
+        4. Create partial files with specified names in /partials
+        5. Load partials into index.html
+        6. Create /css/styles.css
+        7. Create style files with specified names in /css
+        8. Import all style files into /css/styles.css
+
+        
+*/
+
+
 import fs from 'fs';
 import path from 'path';
 
+/* Insert here names of your section */
 const sectionName = [
-                        "header", 
-                        "hero",
-                        "welcome",
-                        "quality",
-                        "expirience",
-                        "subscribe",
-                        "testimonials", 
-                        "location",
-                        "footer",
-                        "mobile-menu",
-                        "modal-success",
-                    ]
+  "header",
+  "hero",
+  "welcome",
+  "quality",
+  "expirience",
+  "subscribe",
+  "testimonials",
+  "location",
+  "footer",
+  "mobile-menu",
+  "modal-success",
+]
 const partials = './partials/';
 const css = './css/';
 
+
+/* Deleting all tamplate content from dirs /partials and /css */
 // fs.readdir(partials, (err, files) => {
 //     if (err) {
 //       console.error('Ошибка чтения папки:', err);
 //       return;
 //     }
-  
+
 //     files.forEach(file => {
 //       const filePath = path.join(partials, file);
 //       // Проверяем, что это файл, а не подпапка (если нужно удалять только файлы)
@@ -49,7 +75,7 @@ const css = './css/';
 //       console.error('Ошибка чтения папки:', err);
 //       return;
 //     }
-  
+
 //     files.forEach(file => {
 //       const filePath = path.join(css, file);
 //       // Проверяем, что это файл, а не подпапка (если нужно удалять только файлы)
@@ -193,34 +219,31 @@ const css = './css/';
 // });
 
 
+/* Creating style.css*/
 fs.readdir(css, (err, files) => {
-      if (err) {
-        console.error('Ошибка при чтении директории:', err); // Обработка ошибки
-        return;
-      }
-      files.forEach(file => {
-        if(file!=='styles.css' || file!=='style.css')
-            fs.appendFile(path.join(css, `styles.css`), 
-            `@import url('./${file}');\n`, (err) => {
-                if (err) {
-                console.error('Error:', err);
-                return;
-                }
-                console.log(`File ${file} imported successfuly!`);
-            });
-        //console.log(file); // Выводим имя каждого файла
-      });
-    });
+  if (err) {
+    console.error('Ошибка при чтении директории:', err); // Обработка ошибки
+    return;
+  }
+  files.forEach(file => {
+    if (file !== 'styles.css' || file !== 'style.css')
+      fs.appendFile(path.join(css, `styles.css`),
+        `@import url('./${file}');\n`, (err) => {
+          if (err) {
+            console.error('Error:', err);
+            return;
+          }
+          console.log(`File ${file} imported successfuly!`);
+        });
+  });
+});
 
-    fs.readdir(css, (err, files) => {
-      if (err) {
-        console.error('Ошибка при чтении директории:', err); // Обработка ошибки
-        return;
-      }
-      files.forEach(file => {
-        
-            fs.writeFile(path.join(partials, `index.html`), 
-            `<!DOCTYPE html>
+
+/* Createng index.html */
+
+async function appendToFileStart() {
+  await fs.appendFile(`index.html`, `
+  <!DOCTYPE html>
             <html lang="en">
               <head>
                 <meta charset="UTF-8" />
@@ -229,35 +252,57 @@ fs.readdir(css, (err, files) => {
                 <title>Coffee Joy</title>
                 <link rel="stylesheet" href="./css/styles.css" />
               </head>
-              <body>
-                <load src="./partials/header.html" />
-            
-                <main>
-                  <load src="./partials/${file}" />
-                  <load src="./partials/welcome.html" />
-                  <load src="./partials/quality.html" />
-                  <load src="./partials/expirience.html" />
-                  <load src="./partials/subscribe.html" />
-                  <load src="./partials/testimonials.html" />
-                  <load src="./partials/location.html" />
-                  <load src="./partials/mobile-menu.html" />
-                  <load src="./partials/modal-success.html" />
-                </main>
-            
-                <load src="./partials/footer.html" />
-            
-                <script type="module" src="./main.js"></script>
-              </body>
-            </html>`, 
-            (err) => {
-                if (err) {
-                console.error('Error:', err);
-                return;
-                }
-                console.log(`File ${file} imported successfuly!`);
-            });
-        //console.log(file); // Выводим имя каждого файла
-      });
+              <body>`,
+    (err) => {
+      if (err) {
+        console.error('Error:', err);
+        return;
+      }
+      console.log(`Head imported successfuly!`);
     });
+}
+appendToFileStart();
+
+fs.readdir(partials, (err, files) => {
+  if (err) {
+    console.error('Ошибка при чтении директории:', err); // Обработка ошибки
+    return;
+  }
+
+  files.forEach(file => {
+
+    fs.appendFile(
+      `index.html`,
+      `<load src="./partials/${file}" />\n`,
+      (err) => {
+        if (err) {
+          console.error('Error:', err);
+          return;
+        }
+        console.log(`File ${file} load successfuly!`);
+      });
+    //console.log(file); // Выводим имя каждого файла
+  });
+});
+
+async function appendToFileEnd() {
+  await fs.appendFile(`index.html`, `
+  <script type="module" src="./main.js"></script>
+  </body>
+</html>`,
+    (err) => {
+      if (err) {
+        console.error('Error:', err);
+        return;
+      }
+      console.log(`Script and the end imported successfuly!`);
+    });
+}
+
+setTimeout(() => {
+  appendToFileEnd();
+}, 1000);
+
+
 
 console.log("Thanks! I'm alive!");
