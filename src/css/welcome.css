@@ -1,1 +1,63 @@
-/*Styles for section welcome*/ 
+/*Styles for section welcome*/
+.welcome-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: start;
+}
+
+
+.subheader {
+    margin-bottom: 16px;
+}
+
+.welcome-title {
+    margin-bottom: 32px;
+}
+
+.welcome-btn-icon {
+    fill: var(--color-white);
+    margin-left: 12px;
+}
+
+.welcome-btn {
+    width: 288px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.welcome-img {
+    border-radius: 40px;
+    overflow: hidden;
+    margin-top: 32px;
+}
+
+@media (min-width: 768px) {
+    .welcome-container {
+        flex-direction: row;
+        gap: 32px;
+        align-items: flex-start;
+    }
+
+    .welcome-content {
+        width: 336px;
+    }
+
+    .welcome-title {
+        margin: 0;
+    }
+
+    .welcome-btn {
+        width: 181px;
+        height: 44px;
+        font-size: 16px;
+    }
+}
+
+@media (min-width: 1440px) {
+    .welcome-content {
+        width: 640px;
+    }
+}
