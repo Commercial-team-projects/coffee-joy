@@ -1,58 +1,47 @@
 <section class="section">
-  <div class="container">
-    <div class="subscribe-container">
-      <div class="subscribe-content">
-        <h2>Join Our Coffee Community</h2>
-        <p>
-          Experience the joy of coffee delivered right to your door. Sign up
-          today!
-        </p>
-        <form class="subscribe-form">
-          <input
-            type="email"
-            name="email"
-            placeholder="Your Email Here"
-            required
-          />
-          <button class="subscribe-btn" type="submit">
-            Subscribe
-            <svg class="subscribe-btn-icon" width="13" height="12">
-              <use href="../img/sprite.svg#icon-shevrons"></use>
-            </svg>
-          </button>
-        </form>
-        <p class="under-btn-text">
-          By clicking Get Started, you agree to our Terms and Conditions.
-        </p>
-      </div>
-
-      <picture class="sub-img">
-        <source
-          media="(min-width: 1440px)"
-          srcset="
-            /img/subscribe/sub-web.jpg    1x,
-            /img/subscribe/sub-web@2x.jpg 2x
-          "
+  <div class="container subscribe-container">
+    <div class="subscribe-content">
+      <h2>Join Our Coffee Community</h2>
+      <p>
+        Experience the joy of coffee delivered right to your door. Sign up
+        today!
+      </p>
+      <form class="subscribe-form">
+        <input
+          type="email"
+          name="email"
+          placeholder="Your Email Here"
+          required
         />
-        <source
-          media="(min-width: 768px)"
-          srcset="
-            /img/subscribe/sub-tab.jpg    1x,
-            /img/subscribe/sub-tab@2x.jpg 2x
-          "
-        />
-        <source
-          media="(max-width: 767px)"
-          srcset="
-            /img/subscribe/sub-mob.jpg    1x,
-            /img/subscribe/sub-mob@2x.jpg 2x
-          "
-        />
-        <img
-          srcset="/src/img/subscribe/sub-web.jpg"
-          alt="People working in a modern office space with computers, notebooks, and coffee on a wooden desk, while another person leans against the wall in the background."
-        />
-      </picture>
+        <button class="subscribe-btn" type="submit">
+          Subscribe
+          <svg class="subscribe-btn-icon" width="13" height="12">
+            <use href="../img/sprite.svg#icon-shevrons"></use>
+          </svg>
+        </button>
+      </form>
+      <p class="under-btn-text">
+        By clicking Get Started, you agree to our Terms and Conditions.
+      </p>
     </div>
+
+    <picture class="sub-img">
+      <source
+        media="(min-width: 1440px)"
+        srcset="/img/subscribe/sub-web.jpg 1x, /img/subscribe/sub-web@2x.jpg 2x"
+      />
+      <source
+        media="(min-width: 768px)"
+        srcset="/img/subscribe/sub-tab.jpg 1x, /img/subscribe/sub-tab@2x.jpg 2x"
+      />
+      <source
+        media="(max-width: 767px)"
+        srcset="/img/subscribe/sub-mob.jpg 1x, /img/subscribe/sub-mob@2x.jpg 2x"
+      />
+      <img
+        srcset="/src/img/subscribe/sub-web.jpg"
+        alt="People working in a modern office space with computers, notebooks, and coffee on a wooden desk, while another person leans against the wall in the background."
+      />
+    </picture>
   </div>
 </section>
