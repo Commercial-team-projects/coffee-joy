@@ -60,4 +60,8 @@
     .welcome-content {
         width: 640px;
     }
+
+    .welcome-img {
+        margin-top: 80px;
+    }
 }
