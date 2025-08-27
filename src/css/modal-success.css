@@ -1,1 +1,132 @@
-/*Styles for section modal-success*/ 
+/*Styles for section modal-success*/
+/* mobile styles */
+.modal-oberlay {
+  position: fixed;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  background-color: rgba(0, 0, 0, 0.25);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 250ms ease-in-out, visibilyty 250ms ease-in-out;
+}
+
+.modal-oberlay.subscription-open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal-menu {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 40px;
+  padding: 64px 16px;
+  width: 288px;
+  min-height: 631px;
+  background-color: #e0cbb4;
+  align-items: center;
+  justify-content: center;
+  transition: transform 250ms ease-in-out;
+}
+
+.modal-btn {
+  display: flex;
+  position: absolute;
+  padding: 0;
+  top: 24px;
+  right: 24px;
+  width: 32px;
+  height: 32px;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+.modal-btn-svg {
+  fill: #0b0803;
+}
+
+.modal-title {
+  font-weight: 400;
+  font-size: 32px;
+  text-align: center;
+  color: #0b0803;
+}
+
+.modal-text {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.5;
+  text-align: center;
+  color: #0b0803;
+}
+
+.modal-img {
+  border-radius: 24px;
+  width: 256px;
+  height: 200px;
+  margin: 24px auto;
+}
+
+.modal-close-btn {
+  display: block;
+  width: 256px;
+  height: 44px;
+  margin: 0 auto;
+}
+
+/* tablet styles */
+@media only screen and (min-width: 768px) {
+  .modal-menu {
+    padding: 64px 30px;
+    width: 704px;
+    min-height: 771px;
+  }
+
+  .modal-title {
+    font-size: 36px;
+    max-width: 470px;
+    margin: 0 auto 24px;
+  }
+
+  .modal-img {
+    border-radius: 40px;
+    width: 644px;
+    height: 374px;
+    margin: 48px auto;
+  }
+
+  .modal-close-btn {
+    width: 340px;
+  }
+}
+
+/* desktop styles */
+@media only screen and (min-width: 1440px) {
+  .modal-menu {
+    padding: 64px;
+    width: 866px;
+    min-height: 801px;
+  }
+  .modal-btn {
+    right: 73px;
+  }
+
+  .modal-title {
+    font-size: 48px;
+    max-width: 630px;
+  }
+
+  .modal-close-btn {
+    width: 274px;
+  }
+}
