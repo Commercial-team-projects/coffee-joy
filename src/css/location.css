@@ -1,1 +1,99 @@
-/*Styles for section location*/ 
+/*Styles for section location*/
+
+h3 {
+    font-weight: 400;
+    line-height: 1.4;
+    letter-spacing: -0.01em;
+    font-family: var(--second-family);
+
+    text-align: start;
+    text-transform: uppercase;
+}
+
+.find-box {
+    margin-bottom: 40px;
+}
+
+.location .section-title {}
+
+.location .description {}
+
+.location .contacts {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin-bottom: 32px;
+}
+
+.location .contact-item {
+    width: 208px;
+}
+
+.location .contact-icon {
+    margin-bottom: 16px;
+}
+
+.location .contact-title {
+    margin-bottom: 8px;
+}
+
+.location .contact-link {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    text-decoration: underline;
+    text-decoration-skip-ink: none;
+    color: var(--color-scheme-1-text);
+}
+
+.location .map-address {
+    font-size: 16px;
+}
+
+.location .map-link {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-right: 8px;
+}
+
+.icon-chevron {
+    margin-left: 8px;
+}
+
+.location .map {
+    border-radius: 40px;
+    width: 288px;
+    height: 307px;
+}
+
+@media only screen and (min-width:768px) {
+    .location .contacts {
+        flex-direction: row;
+    }
+
+    .location .map {
+        width: 704px;
+        height: 377px;
+    }
+}
+
+@media only screen and (min-width:1440px) {
+    .box {
+        display: flex;
+        gap: 24px;
+    }
+
+    .location .contacts {
+        flex-direction: column;
+    }
+
+    .location .map {
+        width: 869px;
+        height: 697px;
+    }
+
+    .box-text {
+        width: 419px;
+    }
+
+}
