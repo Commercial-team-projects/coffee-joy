@@ -5,7 +5,6 @@
     align-items: center;
     justify-content: space-between;
     padding: 18px 64px;
-    border: 1px dashed blue;
 }
 
 .navigation-list {
@@ -34,8 +33,6 @@
         justify-content: space-between;
         align-items: center;
         width: 100%;
-
-        border: 1px dashed tomato;
     }
 
     .navigation-list {
@@ -65,9 +62,4 @@
     .burger-menu {
         display: none;
     }
-}
-
-
-@media only screen and (min-width: 1440px) {
-    .navigation .logo {}
 }
