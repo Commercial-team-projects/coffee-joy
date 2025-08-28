@@ -37,18 +37,16 @@
 }
 
 .mobile-menu-close-btn {
-    width: 124px;
-    height: 124px;
-    border: 1px solid red;
+    width: 48px;
+    height: 48px;  
     border-radius: 50%;
-    background-color: yellow;
     position: absolute;
-    top: ;
-    right: ;
+    top: 12;
+    right: 16;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: ;
+    margin-bottom: 12px;
 }
 
 .navigation-list {
