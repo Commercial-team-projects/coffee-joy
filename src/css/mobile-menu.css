@@ -52,31 +52,26 @@ button{
     
 }
 .mobile-menu-close-btn {
-    width: 48px;
-    height: 48px;
+    width: 11px;
+    height: 11px;
     padding: 26px;
-    
+    fill:blue;
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 1px darkred dashed;
+    border: 1px fuchsia dashed;
 }
 .mobile-logo{}
 
 
-
-
-
-
 .navigation-mobile{
-    border: 1px dashed blue;
+    width: 100%;
 }
-.navigation-list {  
+.navigation-list { 
+    border: 1px dashed blue; 
     display: flex;
     flex-direction: column;
     gap: 32px;
-    margin-bottom: auto;
-    width: 100%;
 }
 .mobile-menu-link{
     font-size: 16px;
