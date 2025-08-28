@@ -14,6 +14,11 @@ h3 {
     margin-bottom: 40px;
 }
 
+.find-text {
+    margin-bottom: 16px;
+
+}
+
 .location .section-title {}
 
 .location .description {}
@@ -25,9 +30,7 @@ h3 {
     margin-bottom: 32px;
 }
 
-.location .contact-item {
-    width: 208px;
-}
+.location .contact-item {}
 
 .location .contact-icon {
     margin-bottom: 16px;
@@ -48,6 +51,7 @@ h3 {
 
 .location .map-address {
     font-size: 16px;
+
 }
 
 .location .map-link {
@@ -60,9 +64,15 @@ h3 {
     margin-left: 8px;
 }
 
-.location .map {
+/* .location .map {
     border-radius: 40px;
-    width: 288px;
+    width: 100%;
+    height: 307px;
+} */
+
+#map {
+    border-radius: 40px;
+    width: 100%;
     height: 307px;
 }
 
@@ -71,7 +81,11 @@ h3 {
         flex-direction: row;
     }
 
-    .location .map {
+    .location .contact-item {
+        width: 208px;
+    }
+
+    #map {
         width: 704px;
         height: 377px;
     }
@@ -87,13 +101,18 @@ h3 {
         flex-direction: column;
     }
 
-    .location .map {
+    #map {
         width: 869px;
         height: 697px;
     }
 
     .box-text {
         width: 419px;
+        height: 633px;
+    }
+
+    .location .contact-item {
+        width: 100%;
     }
 
 }
