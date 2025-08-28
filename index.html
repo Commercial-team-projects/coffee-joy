@@ -193,7 +193,7 @@
           placeholder="Your Email Here"
           required
         />
-        <button class="subscribe-btn" type="submit">
+        <button class="subscribe-btn" type="submit" data-modal-open>
           Subscribe
           <svg class="subscribe-btn-icon" width="13" height="12">
             <use href="../img/sprite.svg#icon-shevrons"></use>
@@ -556,7 +556,7 @@
 
       <section class="section"><div class="container"></div></section>
       <section class="section"><div class="container"></div></section>
-      <div class="modal-oberlay">
+      <div class="modal-oberlay subscription-open" data-modal>
   <div class="modal-menu">
     <button class="modal-btn" type="button">
       <svg class="modal-btn-svg" width="14" height="14">
@@ -586,7 +586,9 @@
         alt="CoffeeJoy"
       />
     </picture>
-    <button class="modal-close-btn" type="button">Close</button>
+    <button class="modal-close-btn" type="button" data-modal-close>
+      Close
+    </button>
   </div>
 </div>
 
