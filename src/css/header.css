@@ -11,7 +11,7 @@
     display: none;
 }
 
-.item-link {
+.navigation-item .item-link {
     font-weight: 500;
     padding-top: 24px;
     padding-bottom: 24px;
