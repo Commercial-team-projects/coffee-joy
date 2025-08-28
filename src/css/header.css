@@ -1,11 +1,4 @@
 /*Styles for section header*/
-.container {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    padding: 18px 64px;
-}
 
 .navigation-list {
     display: none;
