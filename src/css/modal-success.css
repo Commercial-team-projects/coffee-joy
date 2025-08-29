@@ -1,6 +1,6 @@
 /*Styles for section modal-success*/
 /* mobile styles */
-.modal-oberlay {
+.modal-overlay {
   position: fixed;
   display: flex;
   width: 100%;
@@ -12,12 +12,14 @@
   z-index: 999;
   background-color: rgba(0, 0, 0, 0.25);
   opacity: 0;
+  visibility: hidden;
   pointer-events: none;
-  transition: opacity 250ms ease-in-out, visibilyty 250ms ease-in-out;
+  transition: opacity 250ms ease-in-out, visibility 250ms ease-in-out;
 }
 
-.modal-oberlay.subscription-open {
+.modal-overlay.subscription-open {
   opacity: 1;
+  visibility: visible;
   pointer-events: auto;
 }
 
