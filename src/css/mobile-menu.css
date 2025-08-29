@@ -45,15 +45,13 @@ button{
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 1px tomato dashed;
     background: transparent;
     border-radius: 0;
     box-shadow: none;
 }
 .menu-close-btn-icon-mobile{
     background: transparent;
-    color: var(--color-neutral-darkest);
-    /* background-color: aqua; */
+    fill: var(--color-neutral-darkest);
 }
 .navigation-list-mobile{ 
     display: flex;
