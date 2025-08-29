@@ -158,6 +158,7 @@ input.error {
 a {
   font-weight: 500;
   color: var(--color-neutral-darkest);
+  display: block;
 }
 
 a:hover,
