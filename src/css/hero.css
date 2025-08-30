@@ -42,14 +42,15 @@
     background: var(--color-coffee-dark);
 }
 
-@media only screen and (max-width: 375px) {
+@media only screen and (max-width: 767px) {
     .section-hero {
         background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
             url(/img/hero/hero-mobile-min.jpg);
+        min-width: 320px;
     }
 }
 
-@media only screen and (max-width: 375px) and (min-resolution: 2x) {
+@media only screen and (max-width: 767px) and (min-resolution: 2x) {
     .section-hero {
         background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
             url(/img/hero/hero-mobile@2x-min.jpg);
