@@ -92,6 +92,10 @@
             url(/img/hero/hero-desktop-min.jpg);
     }
 
+    .section-container {
+        padding: 0 64px;
+    }
+
     .hero-title {
         height: 201px;
     }
